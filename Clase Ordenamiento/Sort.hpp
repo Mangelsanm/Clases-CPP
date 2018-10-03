@@ -7,6 +7,8 @@ public:
     void getElements(int nElemts);
     void printElements();
     void bubble();
+    void quickSort(int inicio, int fin);
+    int divide(int inicio, int fin);
 private:
     int nElement;
     int *Elements;

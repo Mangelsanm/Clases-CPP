@@ -41,3 +41,38 @@ void Sort::bubble(){
         }
     }
 }
+
+void Sort::quickSort(int inicio, int fin){
+    int pivote;
+    if(inicio < fin){
+        pivote = divide(inicio, fin);
+        quickSort(inicio, pivote);
+        quickSort(pivote + 1, fin);
+    }
+}
+
+int Sort::divide(int inicio, int fin){
+    int pivote = fin - 1;
+    int izquierda = inicio;
+    int derecha = fin - 2;
+    int auxiliar = 0;
+
+    while(izquierda <= derecha){
+        while(Elements[izquierda] < Elements[pivote]){
+            izquierda++;
+        }
+        while(Elements[derecha] > Elements[pivote]){
+            derecha--;
+        }
+        if(izquierda < derecha){
+            auxiliar = Elements[izquierda];
+            Elements[izquierda] = Elements[derecha];
+            Elements[derecha] = auxiliar;
+        }
+    }
+    auxiliar = Elements[izquierda];
+    Elements[izquierda] = Elements[pivote];
+    Elements[pivote] = auxiliar;
+
+    return izquierda;
+}
