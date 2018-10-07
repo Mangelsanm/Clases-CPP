@@ -9,6 +9,7 @@ public:
     void bubble();
     void quickSort(int inicio, int fin);
     int divide(int inicio, int fin);
+    void burbujaBidi();
 private:
     int nElement;
     int *Elements;

@@ -27,7 +27,7 @@ void Sort::printElements() {
             cout << Elements[j] << flush;
         }
     }
-    cout << "]" << endl;
+    cout << "]" << "\n" << endl;
 }
 
 void Sort::bubble(){
@@ -76,3 +76,40 @@ int Sort::divide(int inicio, int fin){
 
     return izquierda;
 }
+
+/* inicia metodo de ordenamiento */
+void Sort::burbujaBidi(){
+    // valores de los indices iniciales
+    int izquierda = 0;
+    int derecha = nElement - 1;
+    int auxiliar = 0;
+
+    // en este punto se sabe cuando los indices se cruzan y termina el ciclo
+    while(izquierda <= derecha){
+
+        // ciclo for para colocar los numeros mas grandes al final del arreglo
+        for(int j = izquierda; j < derecha; j++){
+            if(Elements[j] > Elements[j+1]){
+                auxiliar = Elements[j];
+                Elements[j] = Elements[j+1];
+                Elements[j+1] = auxiliar;
+            }
+        }
+
+        // ciclo for para colocar los numeros mas pequeños al inicio del arreglo
+        for(int k = derecha; k > izquierda; k--){
+            if(Elements[k] < Elements[k-1]){
+                auxiliar = Elements[k];
+                Elements[k] = Elements[k-1];
+                Elements[k-1] = auxiliar;
+            }
+        }
+
+        // disminuimos y aumentamos los idices inferior y superior para no volver
+        // a repasar todo el arreglo, ya que los valores extremos se van acomodando
+        // en su lugar correcto al terminar cada uno de los ciclos anteriores
+        izquierda++;
+        derecha--;
+    }
+}
+/* fin del metodo */
