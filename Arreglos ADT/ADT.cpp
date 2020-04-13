@@ -26,6 +26,30 @@ void ADT::insertarElemento(int nuevoElemento, int indice) {
     longitud++;
 }
 
+void ADT::borrarElemento(int indice) {
+    if(indice >= 0 && indice < longitud) {
+        for(int i = indice; i < longitud; i++) {
+            Elementos[i] = Elementos[i+1];
+        }
+        Elementos[longitud-1] = 0;
+        longitud--;
+    }
+}
+
+/***************************************/
+//Retorna el indice donde se encuentra
+//el elemento a buscar, si no se encuen-
+//tra, regresa un -1
+/***************************************/
+int ADT::busquedaLineal(int elemento) {
+    for(int i = 0; i < longitud; i++) {
+        if(elemento == Elementos[i]) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 void ADT::mostrarElementos() {
     cout << endl;
     cout << "[" << flush;

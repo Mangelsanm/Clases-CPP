@@ -16,6 +16,9 @@ int main() {
     arr.mostrarElementos();
     arr.insertarElemento(10, 5);
     arr.mostrarElementos();
+    arr.borrarElemento(5);
+    arr.mostrarElementos();
+    cout << "\n" <<arr.busquedaLineal(69) << endl;
 
     return 0;
 }
