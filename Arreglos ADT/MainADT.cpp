@@ -18,7 +18,15 @@ int main() {
     arr.mostrarElementos();
     arr.borrarElemento(5);
     arr.mostrarElementos();
-    cout << "\n" <<arr.busquedaLineal(69) << endl;
+    cout << "\n" << arr.busquedaLineal(69) << endl;
+
+    //Para usar la busqueda binaria, existe un condicio.
+    //El arreglo proporcionado, debe estar ordenado de 
+    //menor a mayor. Remover el comentario y proporcionar
+    //elementos ordenados de menor a mayor.
+    //(se corregira en futuros commits)
+
+    //cout << "\n" << arr.busquedaBinariaLoop(33) << endl;
 
     return 0;
 }

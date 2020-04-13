@@ -50,6 +50,32 @@ int ADT::busquedaLineal(int elemento) {
     return -1;
 }
 
+/***************************************/
+//Retorna el indice donde se encuentra
+//el elemento a buscar, si no se encuen-
+//tra, regresa un -1
+/***************************************/
+int ADT::busquedaBinariaLoop(int elemento) {
+    int bajo = 0;
+    int alto = longitud - 1;
+    int medio = 0;
+
+    while(bajo <= alto) {
+        int medio = (bajo + alto) / 2;
+        if(elemento == Elementos[medio]) {
+            return medio;
+        }
+        else if(elemento > Elementos[medio]) {
+            bajo = medio + 1;
+        }
+        else {
+            alto = medio - 1;
+        }
+    }
+
+    return -1;
+}
+
 void ADT::mostrarElementos() {
     cout << endl;
     cout << "[" << flush;

@@ -14,5 +14,6 @@ class ADT {
     void insertarElemento(int nuevoElemento, int indice);
     void borrarElemento(int indice);
     int busquedaLineal(int elemento);
+    int busquedaBinariaLoop(int elemento);
     
 };
