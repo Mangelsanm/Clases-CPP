@@ -15,5 +15,7 @@ class ADT {
     void borrarElemento(int indice);
     int busquedaLineal(int elemento);
     int busquedaBinariaLoop(int elemento);
+    void min();
+    void max();
     
 };

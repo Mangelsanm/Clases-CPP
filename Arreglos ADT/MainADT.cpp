@@ -19,6 +19,8 @@ int main() {
     arr.borrarElemento(5);
     arr.mostrarElementos();
     cout << "\n" << arr.busquedaLineal(69) << endl;
+    arr.min();
+    arr.max();
 
     //Para usar la busqueda binaria, existe un condicio.
     //El arreglo proporcionado, debe estar ordenado de 

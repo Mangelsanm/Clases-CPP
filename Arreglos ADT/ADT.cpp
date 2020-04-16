@@ -76,6 +76,32 @@ int ADT::busquedaBinariaLoop(int elemento) {
     return -1;
 }
 
+/***************************************/
+//Retorna el valor minimo del arreglo
+/***************************************/
+void ADT::min(){
+    int minimo = Elementos[0];
+
+    for(int i = 1; i < longitud; i++) {
+        if(Elementos[i] < minimo)
+            minimo = Elementos[i];
+    }
+    cout << "\n" << "Minimo: " << minimo << endl;
+}
+
+/***************************************/
+//Retorna el valor maximo del arreglo
+/***************************************/
+void ADT::max(){
+    int maximo = Elementos[0];
+
+    for(int i = 1; i < longitud; i++) {
+        if(Elementos[i] > maximo)
+            maximo = Elementos[i];
+    }
+    cout << "\n" << "Maximo: " << maximo << endl;
+}
+
 void ADT::mostrarElementos() {
     cout << endl;
     cout << "[" << flush;
