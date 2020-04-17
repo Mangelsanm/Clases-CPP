@@ -17,5 +17,8 @@ class ADT {
     int busquedaBinariaLoop(int elemento);
     void min();
     void max();
+    void suma();
+    void promedio();
+    void invertir();
     
 };

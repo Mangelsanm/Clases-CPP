@@ -102,6 +102,46 @@ void ADT::max(){
     cout << "\n" << "Maximo: " << maximo << endl;
 }
 
+/***************************************/
+//Suma todos los elementos de un arreglo
+//e imprime su valor.
+/***************************************/
+void ADT::suma() {
+    int total = 0;
+    for(int i = 0; i < longitud; i++)
+        total = total + Elementos[i];
+    cout << "\n" << "Suma de elementos: " << total << endl;
+}
+
+/***************************************/
+//Promedio de los elementos del arreglo.
+//Imprime el valor.
+/***************************************/
+void ADT::promedio() {
+    float total = 0;
+    for(int i = 0; i < longitud; i++)
+        total = total + Elementos[i];
+    total = total / longitud;
+    cout << "\n" << "Promedio: " << total << endl;
+}
+
+/***************************************/
+//Invierte el contenido de un arreglo.
+//Imprime el resultado
+/***************************************/
+void ADT::invertir() {
+    int izquierda = 0;
+    int derecha = longitud - 1;
+    int auxiliar = 0;
+
+    for(; izquierda < derecha; izquierda++, derecha--) {
+        auxiliar = Elementos[izquierda];
+        Elementos[izquierda] = Elementos[derecha];
+        Elementos[derecha] = auxiliar;
+    }
+    mostrarElementos();
+}
+
 void ADT::mostrarElementos() {
     cout << endl;
     cout << "[" << flush;

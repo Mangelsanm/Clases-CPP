@@ -11,7 +11,7 @@ int main() {
 
     arr.obtenerElementos(longitud);
     arr.mostrarElementos();
-    arr.agregarElemento(69);
+    /*arr.agregarElemento(69);
     arr.agregarElemento(41);
     arr.mostrarElementos();
     arr.insertarElemento(10, 5);
@@ -21,6 +21,9 @@ int main() {
     cout << "\n" << arr.busquedaLineal(69) << endl;
     arr.min();
     arr.max();
+    arr.suma();
+    arr.promedio();*/
+    arr.invertir();
 
     //Para usar la busqueda binaria, existe un condicio.
     //El arreglo proporcionado, debe estar ordenado de 
