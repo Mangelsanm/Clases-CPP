@@ -8,6 +8,7 @@ class ADT {
     int longitud;
 
     public:
+    ~ADT();
     void obtenerElementos(int longitud);
     void mostrarElementos();
     void agregarElemento(int nuevoElemento);
@@ -20,5 +21,7 @@ class ADT {
     void suma();
     void promedio();
     void invertir();
+    void rotarIzquierda();
+    void rotarDerecha();
     
 };

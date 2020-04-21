@@ -22,8 +22,10 @@ int main() {
     arr.min();
     arr.max();
     arr.suma();
-    arr.promedio();*/
+    arr.promedio();
     arr.invertir();
+    arr.rotarIzquierda();*/
+    arr.rotarDerecha();
 
     //Para usar la busqueda binaria, existe un condicio.
     //El arreglo proporcionado, debe estar ordenado de 

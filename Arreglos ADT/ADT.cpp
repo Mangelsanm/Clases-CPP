@@ -2,6 +2,18 @@
 #include "ADT.hpp"
 using namespace std;
 
+/***************************************/
+//Constructor
+/***************************************/
+
+
+/***************************************/
+//Destructor
+/***************************************/
+ADT::~ADT() {
+    delete [] Elementos;
+}
+
 void ADT::obtenerElementos(int longitud) {
     this -> longitud = longitud;
 
@@ -139,6 +151,34 @@ void ADT::invertir() {
         Elementos[izquierda] = Elementos[derecha];
         Elementos[derecha] = auxiliar;
     }
+    mostrarElementos();
+}
+
+/***************************************/
+//Rotar a la izquierda
+//Imprime el resultado
+/***************************************/
+void ADT::rotarIzquierda() {
+    int auxiliar = Elementos[0];
+
+    for(int i = 0; i < longitud - 1; i++) {
+        Elementos[i] = Elementos[i+1];
+    }
+    Elementos[longitud-1] = auxiliar;
+    mostrarElementos();
+}
+
+/***************************************/
+//Rotar a la izquierda
+//Imprime el resultado
+/***************************************/
+void ADT::rotarDerecha() {
+    int auxiliar = Elementos[longitud-1];
+
+    for(int i = longitud-1; i > 0; i--) {
+        Elementos[i] = Elementos[i-1];
+    }
+    Elementos[0] = auxiliar;
     mostrarElementos();
 }
 
